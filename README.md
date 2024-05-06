@@ -1,21 +1,21 @@
 # guess-the-number-cpp
 
+## Зависимости
+
+- cmake
+- make
+
 ## Установка
 
+- Скачайте архив игры из раздела [релизов](https://github.com/HamletSargsyan/guess-the-number-cpp/releases/latest)
+- Распакуйте архив и зайдите в каталог с игрой
+- Напишите следующие команды
+
 ```bash
-# Установка через curl
-curl -LJO $(curl -s https://api.github.com/repos/HamletSargsyan/guess-the-number-cpp/releases/latest | grep "tarball_url" | cut -d '"' -f 4)
-
-# Установка через wget
-wget $(wget -qO- https://api.github.com/repos/HamletSargsyan/guess-the-number-cpp/releases/latest | grep "tarball_url" | cut -d '"' -f 4)
-
-tar -zxvf guess-the-number-cpp-*.tar.gz
-
-cd guess-the-number-cpp-*
 chmod +x ./build.sh
-
 ./build.sh
 
+# Запуск
 ./build/guess-the-number-cpp
 ```
 
