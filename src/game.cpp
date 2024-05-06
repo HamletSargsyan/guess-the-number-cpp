@@ -9,8 +9,8 @@ void Game::start() {
     // Генерируем случайное число от 1 до 100
     GRand rand;
     secretNumber = rand.i(100);
-    std::cout << termcolor::green << "Добро пожаловать в игру 'Угадай число'!" << std::endl;
-    std::cout << termcolor::blue << "Я загадал число от 1 до 100. Попробуй угадать!" << termcolor::reset << std::endl;
+    std::cout << termcolor::green << "\n\nДобро пожаловать в игру 'Угадай число'!" << std::endl;
+    std::cout << termcolor::blue << "Я загадал число от 1 до 100. Попробуй угадать!\n\n" << termcolor::reset << std::endl;
 }
 
 // Реализация метода guess() класса Game
@@ -28,16 +28,23 @@ void Game::guess(int number) {
 }
 
 // Реализация метода run() класса Game
-void Game::run() {
+int Game::run() {
     start();
     while (!gameOver) {
         int guessNumber;
         std::cout << "Введите ваше предположение: ";
         std::cin >> guessNumber;
-        guess(guessNumber);
+        if (attempts <= maxAttempts) {
+            guess(guessNumber);
+            attempts++;
+        } else {
+            std::cout << termcolor::red << "Упс. Попытки закончились :-(" << std::endl;
+            return 1;
+        }
     }
 
     std::cout << std::endl;
     std::cout << termcolor::magenta << "Разработчик: https://www.github.com/HamletSargsyan" << std::endl;
     std::cout << "Репозиторий игры: https://www.github.com/HamletSargsyan/guess-the-number-cpp" << termcolor::reset << std::endl;
+    return 0;
 }
