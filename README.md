@@ -18,3 +18,12 @@ chmod +x ./build.sh
 
 ./build/guess-the-number-cpp
 ```
+
+## Использованные библиотеки
+
+- [Termcolor](https://github.com/ikalnytskyi/termcolor)
+- [GRand](https://github.com/ggchappell/GRand)
+
+## Лицензия
+
+Лицензировано по лицензии [MIT](https://github.com/HamletSargsyan/guess-the-number-cpp/blob/main/LICENSE)
