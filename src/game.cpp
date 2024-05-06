@@ -38,7 +38,7 @@ int Game::run() {
             guess(guessNumber);
             attempts++;
         } else {
-            std::cout << termcolor::red << "Упс. Попытки закончились :-(" << std::endl;
+            std::cout << termcolor::red << "Упс. Попытки закончились :(" << std::endl;
             return 1;
         }
     }

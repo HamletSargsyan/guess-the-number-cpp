@@ -10,7 +10,7 @@ class Game {
     private:
         int secretNumber;
         bool gameOver = false;
-        int attempts;
+        int attempts = 0;
         int maxAttempts = 10;
 };
 
