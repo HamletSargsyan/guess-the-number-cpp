@@ -1,5 +1,8 @@
 # guess-the-number-cpp
 
+> [!WARNING]
+> этот проект не поддерживается, см. https://github.com/HamletSargsyan/guess-the-number
+
 ## Зависимости
 
 - cmake
